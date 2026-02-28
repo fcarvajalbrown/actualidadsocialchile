@@ -22,7 +22,7 @@ export default function Home() {
             Actualidad Social Chile
           </h1>
           <p className="text-center text-sm text-gray-600 mt-1 italic">
-            “Condensando el Cuarto Poder”
+            "Condensando el Cuarto Poder"
           </p>
           <div className="border-t border-gray-300 mt-4"></div>
         </div>
@@ -40,9 +40,9 @@ export default function Home() {
                 </Link>
               </h3>
               <p className="text-gray-600 text-sm mb-3">{post.date}</p>
-              <p className="text-gray-800 text-lg leading-relaxed mb-4">{post.excerpt}</p>
-              <Link 
-                href={`/posts/${post.id}`} 
+              <p className="text-gray-800 text-lg leading-relaxed mb-4 line-clamp-4">{post.excerpt}</p>
+              <Link
+                href={`/posts/${post.id}`}
                 className="text-wsj-red font-medium hover:underline text-sm uppercase tracking-wider"
               >
                 Continuar leyendo →
@@ -51,7 +51,6 @@ export default function Home() {
           ))}
         </div>
 
-        {/* Paginación */}
         {totalPages > 1 && (
           <div className="flex justify-center items-center space-x-4 mt-12 pt-6 border-t border-gray-300">
             {page > 1 && (
