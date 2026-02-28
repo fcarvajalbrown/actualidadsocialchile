@@ -1,0 +1,11 @@
+flowchart TD
+    A[Noticia Chilena Política de Actualidad] --> B[Escribir Prompt:<br>Acumular información de diversas fuentes,<br>incluir reacciones de 3 políticos chilenos,<br>SEO friendly y con tendencia socialista chilena]
+    B --> C[Pasar prompt a tres LLMs]
+    C --> D1[ChatGPT<br>genera blog post]
+    C --> D2[Gemini<br>genera blog post]
+    C --> D3[DeepSeek<br>genera blog post]
+    D1 --> E[Condensar información con LLM local<br>(Qwen u otro modelo en LLM Studio)]
+    D2 --> E
+    D3 --> E
+    E --> F[Revisar ortografía, veracidad, gramática<br>y coherencia con tendencia socialista]
+    F --> G[Publicar en sitio<br>"Noticias Socialistas de Felipe"]
