@@ -8,24 +8,30 @@ export default function Post() {
   const post = posts.find(p => p.id === id)
 
   if (!post) {
-    return <div className="text-center py-20">Artículo no encontrado</div>
+    return <div className="text-center py-20 font-serif">Artículo no encontrado</div>
   }
 
   return (
-    <div className="min-h-screen bg-gray-100">
-      <header className="bg-red-600 text-white py-4 shadow-md">
+    <div className="min-h-screen bg-white font-serif text-gray-900">
+      <header className="border-b border-gray-300 py-4">
         <div className="container mx-auto px-4">
-          <Link href="/" className="text-white hover:underline">← Volver al inicio</Link>
+          <Link href="/" className="text-wsj-red hover:underline text-sm uppercase tracking-wider">
+            ← Volver al inicio
+          </Link>
+          <div className="border-t border-gray-300 mt-4"></div>
         </div>
       </header>
-      <main className="container mx-auto px-4 py-8 max-w-3xl">
-        <article className="bg-white rounded-lg shadow-md p-8">
-          <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
-          <p className="text-gray-500 mb-6">Publicado el {post.date}</p>
-          <div className="prose prose-lg max-w-none">
+      <main className="container mx-auto px-4 py-10 max-w-2xl">
+        <article>
+          <h1 className="text-4xl font-bold mb-3 leading-tight">{post.title}</h1>
+          <p className="text-gray-600 text-sm mb-6">{post.date}</p>
+          <div className="prose prose-lg prose-slate prose-headings:font-serif prose-p:font-serif prose-p:text-gray-800 max-w-none">
             {post.content.split('\n').map((paragraph, i) => (
-              <p key={i} className="mb-4">{paragraph}</p>
+              <p key={i} className="mb-5 text-justify">{paragraph}</p>
             ))}
+          </div>
+          <div className="border-t border-gray-300 mt-10 pt-6 text-sm text-gray-500 italic">
+            Noticias Socialistas de Felipe — Periodismo con mirada de pueblo.
           </div>
         </article>
       </main>
