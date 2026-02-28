@@ -7,7 +7,20 @@ const posts = Array.isArray(postsModule) ? postsModule : (postsModule.default ? 
 function Header() {
   return (
     <header className="bg-white">
-      <div className="h-3 bg-ink"></div>
+      <div className="border-b border-gray-200">
+        <div className="max-w-6xl mx-auto px-4 py-2 flex justify-between items-center">
+          <p className="font-sans text-xs text-gray-500 tracking-wide uppercase">
+            Santiago, Chile
+          </p>
+          <nav className="hidden md:flex gap-6">
+            {['Inicio', 'Política', 'Economía', 'Opinión'].map(item => (
+              <Link key={item} href="/" className="font-sans text-xs text-gray-500 uppercase tracking-wider hover:text-wsj-red transition-colors">
+                {item}
+              </Link>
+            ))}
+          </nav>
+        </div>
+      </div>
 
       <div className="border-b-4 border-ink py-6">
         <div className="max-w-6xl mx-auto px-4 text-center">
@@ -26,6 +39,7 @@ function Header() {
         </div>
       </div>
 
+      {/* Decorative black bar */}
       <div className="h-3 bg-ink"></div>
     </header>
   )
@@ -114,7 +128,6 @@ export default function Post() {
       <Header />
 
       <main className="flex-1 max-w-2xl mx-auto px-4 py-12 w-full">
-        {/* Breadcrumb */}
         <Link href="/" className="font-sans text-xs text-wsj-red uppercase tracking-widest hover:underline">
           ← Volver al inicio
         </Link>

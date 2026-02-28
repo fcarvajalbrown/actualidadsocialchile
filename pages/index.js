@@ -9,7 +9,20 @@ function Header() {
   return (
     <header className="bg-white">
       {/* Top bar */}
-      <div className="h-3 bg-ink"></div>
+      <div className="border-b border-gray-200">
+        <div className="max-w-6xl mx-auto px-4 py-2 flex justify-between items-center">
+          <p className="font-sans text-xs text-gray-500 tracking-wide uppercase">
+            Santiago, Chile
+          </p>
+          <nav className="hidden md:flex gap-6">
+            {['Inicio', 'Política', 'Economía', 'Opinión'].map(item => (
+              <Link key={item} href="/" className="font-sans text-xs text-gray-500 uppercase tracking-wider hover:text-wsj-red transition-colors">
+                {item}
+              </Link>
+            ))}
+          </nav>
+        </div>
+      </div>
 
       {/* Masthead */}
       <div className="border-b-4 border-ink py-6">
@@ -27,7 +40,7 @@ function Header() {
         </div>
       </div>
 
-      {/* Section nav */}
+      {/* Decorative black bar */}
       <div className="h-3 bg-ink"></div>
     </header>
   )
@@ -37,7 +50,6 @@ function Footer() {
   return (
     <footer className="bg-ink text-gray-300 mt-16">
       <div className="max-w-6xl mx-auto px-4 py-12">
-        {/* Footer masthead */}
         <div className="text-center border-b border-gray-700 pb-8 mb-8">
           <h2 className="font-display text-3xl font-black text-white uppercase tracking-tight">
             Actualidad Social Chile
@@ -46,11 +58,10 @@ function Footer() {
             "Condensando el Cuarto Poder"
           </p>
           <p className="font-serif text-sm text-gray-400 mt-4 max-w-xl mx-auto leading-relaxed">
-            Medio informativo independiente comprometido con el periodismo crítico y la defensa de los derechos humano. Sin financiamiento corporativo, sin falsas neutralidades.
+            Medio informativo independiente comprometido con el periodismo crítico y la defensa de los derechos del pueblo chileno. Sin financiamiento corporativo, sin falsas neutralidades.
           </p>
         </div>
 
-        {/* Footer columns */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 border-b border-gray-700 pb-8 mb-8">
           <div>
             <h4 className="font-sans text-xs uppercase tracking-widest text-gray-500 mb-3">Secciones</h4>
@@ -83,13 +94,12 @@ function Footer() {
           </div>
         </div>
 
-        {/* Copyright */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-2">
           <p className="font-sans text-xs text-gray-600">
             © {new Date().getFullYear()} Actualidad Social Chile. Todos los derechos reservados.
           </p>
           <p className="font-sans text-xs text-gray-600 italic">
-            Dirección: Alameda 63745, Santiago, Chile. Teléfono: +56 2 1234 5678. Correo: contacto@actualidadsocialchile.cl
+            Dirección: Felipe Carvajal Brown
           </p>
         </div>
       </div>
