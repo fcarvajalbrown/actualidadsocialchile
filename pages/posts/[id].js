@@ -1,6 +1,8 @@
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import posts from '@/data/posts.json'
+import postsModule from '@/data/posts.json'
+
+const posts = Array.isArray(postsModule) ? postsModule : (postsModule.default ? postsModule.default : [])
 
 export default function Post() {
   const router = useRouter()

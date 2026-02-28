@@ -1,8 +1,9 @@
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import posts from '@/data/posts.json'
+import postsModule from '@/data/posts.json'
 
 const POSTS_PER_PAGE = 5
+const posts = Array.isArray(postsModule) ? postsModule : (postsModule.default ? postsModule.default : [])
 
 export default function Home() {
   const router = useRouter()
@@ -18,10 +19,10 @@ export default function Home() {
       <header className="border-b border-gray-300 py-6">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold text-center tracking-tight uppercase text-wsj-red">
-            Noticias Socialistas de Felipe
+            Actualidad Social Chile
           </h1>
           <p className="text-center text-sm text-gray-600 mt-1 italic">
-            “La voz del pueblo chileno”
+            “Condensando el Cuarto Poder”
           </p>
           <div className="border-t border-gray-300 mt-4"></div>
         </div>
