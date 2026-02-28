@@ -9,20 +9,7 @@ function Header() {
   return (
     <header className="bg-white">
       {/* Top bar */}
-      <div className="border-b border-gray-200">
-        <div className="max-w-6xl mx-auto px-4 py-2 flex justify-between items-center">
-          <p className="font-sans text-xs text-gray-500 tracking-wide uppercase">
-            Santiago, Chile
-          </p>
-          <nav className="hidden md:flex gap-6">
-            {['Inicio', 'Política', 'Economía', 'Opinión'].map(item => (
-              <Link key={item} href="/" className="font-sans text-xs text-gray-500 uppercase tracking-wider hover:text-wsj-red transition-colors">
-                {item}
-              </Link>
-            ))}
-          </nav>
-        </div>
-      </div>
+      <div className="h-3 bg-ink"></div>
 
       {/* Masthead */}
       <div className="border-b-4 border-ink py-6">
@@ -41,17 +28,7 @@ function Header() {
       </div>
 
       {/* Section nav */}
-      <div className="border-b border-gray-200 bg-ink">
-        <div className="max-w-6xl mx-auto px-4">
-          <nav className="flex gap-6 overflow-x-auto">
-            {['Última Hora', 'Nacional', 'Internacional', 'Economía', 'Sociedad', 'Cultura', 'Opinión'].map(item => (
-              <a key={item} href="#" className="font-sans text-xs text-gray-300 uppercase tracking-wider py-3 whitespace-nowrap hover:text-white transition-colors">
-                {item}
-              </a>
-            ))}
-          </nav>
-        </div>
-      </div>
+      <div className="h-3 bg-ink"></div>
     </header>
   )
 }
