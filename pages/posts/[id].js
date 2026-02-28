@@ -33,7 +33,7 @@ export default function Post() {
             ))}
           </div>
           <div className="border-t border-gray-300 mt-10 pt-6 text-sm text-gray-500 italic">
-            Noticias Socialistas de Felipe — Periodismo con mirada de pueblo.
+            Actualidad Social Chile — Condensando el Cuarto Poder.
           </div>
         </article>
       </main>
