@@ -112,6 +112,8 @@ export default function Post() {
   const { id } = router.query
   const post = posts.find(p => p.id === id)
 
+  if (!id) return null // still loading
+
   if (!post) {
     return (
       <div className="flex flex-col min-h-screen">
